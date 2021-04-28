@@ -1,4 +1,5 @@
 prices = {small: 7.99, medium: 15, large: 45}
+hot_drinks = %w(Latte Hot\ Chocolate Piccolo Green\ Tea Espresso)
 
 puts 'What can I get you today?'
 
@@ -41,3 +42,7 @@ puts "So, that was #{quantity} #{drink_size} #{hot_drink} for a total of #{hot_d
 
 # condition ? if true runs code : if false runs code
 puts hot_drink == "Orange Pekoe" ? "You get a free coffee" : "You don't get a free coffee"
+
+
+puts ""
+puts "#{hot_drinks}"
