@@ -38,3 +38,6 @@ hot_drink_price = price * quantity
 
 #output so that was 17 medium mochas? 
 puts "So, that was #{quantity} #{drink_size} #{hot_drink} for a total of #{hot_drink_price}"
+
+# condition ? if true runs code : if false runs code
+puts hot_drink == "Orange Pekoe" ? "You get a free coffee" : "You don't get a free coffee"
