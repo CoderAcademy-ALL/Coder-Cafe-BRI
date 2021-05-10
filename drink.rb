@@ -1,10 +1,13 @@
 class Drink
 
-  attr_accessor :name
+  attr_reader :name, :size, :description
 
-  def initialize(name, description)
+  @@no_of_drinks = 0  # class variable. 
+
+  def initialize(name, size, description)
     @name = name
     @description = description
+    @size = size
   end
 
   # def to_s
