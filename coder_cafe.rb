@@ -28,20 +28,20 @@ while run_loop  # checks if run loop is true and runs loops if it is
 
   case user_input
 
-  when 'See drink prices'
-    puts 'We have the following drinks in stock: '
-
+  when "See drink prices"
+    puts "We have the following drinks in stock: "
+    
     # for loop
 
     # array of hashes
     hot_drinks.each do |hot_drink|
       puts "#{hot_drink[:name]}:  #{hot_drink[:description]}"
     end
-
+    
     # iterator
     prices.each { |size, price|  puts "#{size}: #{price}" }
 
-  when 'Buy a drink'
+  when "Buy a drink"
     puts 'What can I get you today?'
 
     hot_drink = gets.strip
@@ -69,14 +69,13 @@ while run_loop  # checks if run loop is true and runs loops if it is
     # case statement
     case drink_size
     when "small"
-      price = prices[:small]
-
+    price = prices[:small]
     when "medium"
-      price = prices[:medium]
+    price = prices[:medium]
     when "large"
-      price = prices[:large]
+    price = prices[:large]
     end
- 
+
     hot_drink_price = price * quantity
 
     #output so that was 17 medium mochas? 
@@ -86,10 +85,10 @@ while run_loop  # checks if run loop is true and runs loops if it is
     puts hot_drink == "Orange Pekoe" ? "You get a free coffee" : "You don't get a free coffee"
 
 
-    puts ''
+    puts ""
     puts "#{hot_drinks}"
 
-  when 'exit'
+  when "exit"
     run_loop = false
   end
 
@@ -98,3 +97,4 @@ end
 
 
 
+>>>>>>> c539931729e8933b5c01b445dfa879eacd8b5f27
