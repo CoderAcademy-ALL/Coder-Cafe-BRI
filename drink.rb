@@ -2,17 +2,17 @@ class Drink
 
   attr_reader :name, :size, :description
 
-  @@no_of_drinks = 0  # class variable. 
+  @@no_of_drinks = 0  # class variable
 
   def initialize(name, size, description)
     @name = name
-    @description = description
     @size = size
+    @description = description
   end
 
-  # def to_s
-  #   return "A #{@name}: #{@description}"
-  # end
+  def to_s
+    return "A #{@name}: #{@description}"
+  end
 
   ## Same as attr_reader
   # def get_name 
@@ -27,7 +27,7 @@ class Drink
   ## Use attr_accessor to read and write
 end
 
-# drink = Drink.new("Latte", "milk in coffee").to_s
+# drink = Drink.new("Latte", "small", "milk in coffee")
 # puts drink
 
 # puts "Hello".class

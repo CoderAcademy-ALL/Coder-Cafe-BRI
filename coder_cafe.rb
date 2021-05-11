@@ -1,13 +1,22 @@
+require_relative 'hot_drink'
+
 prices = {small: 7.99, medium: 15, large: 45}
 
-latte = { name: "Latte", description: "Steamed milk with a shot of espresso" }
-hot_chocolate = { name: "Hot Chocolate", description: "Chocolate ^ 3" }
-piccolo = { name: "Piccolo", description: "A pretentious Latte" }
-green_tea = { name: "Green Tea", description: "Tea that is Green" }
-black_tea = {name: "Black tea", description: "Tea that is black." }
-espresso = { name: "Espresso", description: "Pure coffee extract" }
+# latte = { name: "Latte", description: "Steamed milk with a shot of espresso" }
+# hot_chocolate = { name: "Hot Chocolate", description: "Chocolate ^ 3" }
+# piccolo = { name: "Piccolo", description: "A pretentious Latte" }
+# green_tea = { name: "Green Tea", description: "Tea that is Green" }
+# black_tea = {name: "Black tea", description: "Tea that is black." }
+# espresso = { name: "Espresso", description: "Pure coffee extract" }
 
-hot_drinks = [ latte, hot_chocolate, piccolo, green_tea, black_tea, espresso ]
+# name, size, description, has_milk
+latte = HotDrink.new("Latte", "small", "Steamed milk with a shot of espresso", true)
+black_tea = HotDrink.new("Black Tea", "Large", "Tea that is black", false)
+
+# latte.name will access the name attribute
+
+# hot_drinks = [ latte, hot_chocolate, piccolo, green_tea, black_tea, espresso ]
+drinks = [ latte, black_tea]
 
 run_loop = true
 
@@ -33,10 +42,17 @@ while run_loop  # checks if run loop is true and runs loops if it is
     
     # for loop
 
-    # array of hashes
-    hot_drinks.each do |hot_drink|
-      puts "#{hot_drink[:name]}:  #{hot_drink[:description]}"
+    drinks.each do | drink |
+      # drink is a class with attributes
+      puts drink
     end
+
+    # # array of hashes
+    # hot_drinks.each do |hot_drink|
+    #   puts "#{hot_drink[:name]}:  #{hot_drink[:description]}"
+    # end
+
+
     
     # iterator
     prices.each { |size, price|  puts "#{size}: #{price}" }
@@ -94,7 +110,3 @@ while run_loop  # checks if run loop is true and runs loops if it is
 
 
 end
-
-
-
->>>>>>> c539931729e8933b5c01b445dfa879eacd8b5f27
