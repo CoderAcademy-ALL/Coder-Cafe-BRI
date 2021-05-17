@@ -10,3 +10,9 @@ gem 'pry', '~> 0.13.1'
 gem 'pry-byebug'
 
 gem "tty-prompt"
+
+group :development, :test do
+  gem 'rspec'
+#   gem 'rspec-rails'
+#   gem 'rspec-rails-matchers'
+end

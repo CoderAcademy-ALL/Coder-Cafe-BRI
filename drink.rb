@@ -1,6 +1,7 @@
 class Drink
 
   attr_reader :name, :size, :description
+  attr_accessor :no_of_drinks
 
   @@no_of_drinks = 0  # class variable
 

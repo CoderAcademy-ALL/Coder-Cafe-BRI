@@ -28,13 +28,12 @@ class HotDrink < Drink
 
 end
 
-  # latte = HotDrink.new("Latte", "small", "Milk in coffee", true)
+  latte = HotDrink.new("Latte", "small", "Milk in coffee", true)
   
-  # binding.pry
+  binding.pry
 
-  # latte.name.description
-  # latte.make_drink # => no_of_drinks = 1
-  # latte.make_drink # => no_of_drinks = 2
-  # mocha = HotDrink.new("mocha", "small", "chocolate in coffee", true)
-  # puts mocha.no_of_drinks # => no_of_drinks = 3
-  # # puts latte
+  latte.make_drink # => no_of_drinks = 1
+  latte.make_drink # => no_of_drinks = 2
+  mocha = HotDrink.new("mocha", "small", "chocolate in coffee", true)
+  puts mocha.no_of_drinks # => no_of_drinks = 3
+  # puts latte
